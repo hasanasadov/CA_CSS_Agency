@@ -143,8 +143,10 @@ body {
 
 .portfolio {
     width: 100%;
+    background-color: rgb(248, 249, 250);
 }
 .portfolio > .container {
+    background-color: rgb(248, 249, 250);
     padding: 6rem 1rem;
     width: 100%;
     text-align: center;
@@ -172,13 +174,13 @@ body {
     justify-content: center;
     align-items: center;
     .block {
+        background-color: #fff;
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 0 0.75rem;
         margin-bottom: 4rem;
         .img {
             width: 100%;
@@ -199,6 +201,7 @@ body {
 
 .about {
     width: 100%;
+    background-color: rgb(173, 173, 173);
 }
 .about > .container {
     padding: 6rem 1rem;
@@ -210,7 +213,7 @@ body {
         margin-bottom: 1rem;
     }
     .subtext,
-    &>p {
+    & > p {
         color: gray;
         font-size: 1rem;
         font-weight: 400;
@@ -224,6 +227,7 @@ body {
 }
 
 .about-blocks {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,7 +242,7 @@ body {
         align-items: flex-start;
         margin-bottom: 4rem;
         text-align: left;
-        .block-texts{
+        .block-texts {
             padding: 0 20px 0 100px;
             width: fit-content;
             display: flex;
@@ -262,7 +266,7 @@ body {
             width: 80px;
             border-radius: 50%;
             overflow: hidden;
-            border:7px solid #e9ecef;
+            border: 7px solid #e9ecef;
             img {
                 width: 100%;
                 height: 100%;
@@ -272,6 +276,26 @@ body {
             font-size: 1.75rem;
         }
     }
+    .block5 {
+        .img {
+            background-color: #ffc800;
+            text-align: center;
+            font-size: 10px;
+            color: #fff;
+            line-height: 14px;
+            font-weight: 700;
+            height: 80px;
+        }
+    }
+}
+.about-blocks::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    content: "";
+    background-color: #e9ecef;
 }
 
 @media (min-width: 576px) {
@@ -301,7 +325,52 @@ body {
         }
     }
     .portfolio-blocks > .block {
-        width: 48%;
+        width: 50%;
+    }
+    .about-blocks {
+        align-items: start;
+        .block {
+            flex-direction: row-reverse;
+            justify-self: center !important;
+            align-items: flex-start;
+            width: 50% !important;
+            text-align: right;
+            margin-bottom: 100px;
+            .block-texts {
+                float: left;
+                padding: 0 60px 20px 30px !important;
+            }
+            .img {
+                position: absolute;
+                transform: translateX(50px);
+                width: 100px !important;
+            }
+        }
+        .block5{
+            .img{
+                height: 100px;
+            }
+        }
+        .block2,.block4{
+            margin-left: 50%;
+            flex-direction: row;
+            text-align: left;
+            .block-texts {
+                padding: 0 30px 20px 60px !important;
+            }
+            .img {
+                transform: translateX(-50px);
+            }
+        }
+    }
+    .about-blocks::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        content: "";
+        background-color: #e9ecef;
     }
 }
 
@@ -345,6 +414,42 @@ body {
         }
     }
     .portfolio-blocks > .block {
-        width: 32%;
+        width: 33.3%;
+    }
+    .about-blocks {
+        align-items: start;
+        .block {
+            flex-direction: row-reverse;
+            justify-self: center !important;
+            align-items: flex-start;
+            width: 50% !important;
+            text-align: right;
+            margin-bottom: 100px;
+            .block-texts {
+                float: left;
+                padding: 0 90px 20px 30px !important;
+            }
+            .img {
+                position: absolute;
+                transform: translateX(68px);
+                width: 136px !important;
+            }
+        }
+        .block5{
+            .img{
+                height: 136px;
+            }
+        }
+        .block2,.block4{
+            margin-left: 50%;
+            flex-direction: row;
+            text-align: left;
+            .block-texts {
+                padding: 0 30px 20px 90px !important;
+            }
+            .img {
+                transform: translateX(-68px);
+            }
+        }
     }
 }
