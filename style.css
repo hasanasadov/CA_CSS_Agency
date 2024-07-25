@@ -416,6 +416,8 @@
 
 
 
+
+
 @media (min-width: 576px) {
     .portfolio-blocks {
         flex-wrap: wrap;
@@ -434,6 +436,8 @@
     .container {
         width: 90%;
     }
+
+
     .service-items {
         justify-content: center !important;
         flex-direction: row;
@@ -443,12 +447,15 @@
         }
     }
 
+
     .portfolio-blocks {
         .block {
             width: 48% !important;
 
         }
     }
+
+
     .about-blocks {
         align-items: start;
 
@@ -497,16 +504,18 @@
     }
 
 
-
     .team>.container>#footp{
         max-width: 600px ;
     }
+
 }
 
 @media (min-width: 992px) {
     .container {
         width: 100% !important;
     }
+
+
     .header {
         height: 100vh;
     }
@@ -531,6 +540,8 @@
             color: #fff;
         }
     }
+
+
     .services > .container ,.portfolio > .container ,.team>.container{
         max-width: 992px !important;
     }
@@ -542,11 +553,15 @@
             padding: 0 12px;
         }
     }
+
+
     .portfolio-blocks{ 
         .block {
             width: 30% !important;
         }
     }
+
+
     .about-blocks {
         align-items: start;
         .block {
@@ -583,4 +598,10 @@
             }
         }
     }
+
+
+    .team-blocks {
+        flex-direction: row;
+    }
+
 }
